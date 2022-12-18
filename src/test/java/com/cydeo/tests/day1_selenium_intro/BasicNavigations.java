@@ -13,6 +13,8 @@ public class BasicNavigations {
 
         //this is the line opening an empty browser
         WebDriver driver=new ChromeDriver();
+        //This line will maximize the browser size
+        driver.manage().window().maximize();
 
         //3- go to tesla.com
 
@@ -64,6 +66,11 @@ public class BasicNavigations {
 
         System.out.println("currentURL = "+currentURL);
 
+        // this will close only the currently opened window
+        driver.close();
+
+        //it kills current session, it means if more than one window was opened everyting will be closed
+        //driver.quit();
 
 
 
