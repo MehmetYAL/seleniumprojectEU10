@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class GetText_GetAttribute {
+public class TC5_GetText_GetAttribute {
     public static void main(String[] args) {
         //TC #5: getText() and getAttribute() method practice
         //1- Open a chrome browser
@@ -27,12 +27,16 @@ public class GetText_GetAttribute {
             System.out.println("Header text verificitaion Failed");
         }
         //4- Locate “firstname” input box
-        WebElement firstnameInput= driver.findElement(By.name("firstname"));
+        // we are locating the web element using "name" locator
+        // name attribute has "firstname" value
+        //WebElement firstnameInput= driver.findElement(By.name("firstname"));
+        WebElement firstNameInput = driver.findElement(By.className("form-control"));
+
 
         //5- Verify placeholder attribute’s value is as expected:
         //Expected: first name
         String expectedPlaceHolder="first name";
-        String actualPlaceHolder= firstnameInput.getAttribute("placeholder");
+        String actualPlaceHolder= firstNameInput.getAttribute("placeholder");
         if (actualPlaceHolder.equals(expectedPlaceHolder)){
             System.out.println("Placeholder text verification PASSED");
         }else {
