@@ -14,8 +14,9 @@ public class Obilet {
 
         //go to
         driver.get("https://www.obilet.com");
-        WebElement kalkisYeri= driver.findElement(By.id("origin"));
+        WebElement kalkisYeri= driver.findElement(By.id("origin-input"));
      kalkisYeri.click();
-    // kalkisYeri.sendKeys("Bursa"+ Keys.ENTER);
+     kalkisYeri.sendKeys("Bursa");
+     kalkisYeri.click();
     }
 }
