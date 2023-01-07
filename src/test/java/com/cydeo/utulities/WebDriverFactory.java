@@ -10,7 +10,11 @@ public class WebDriverFactory {
     /// TASK: NEW METHOD CREATION
     //// Method name : getDriver
     //// Static method
+
+
     public static WebDriver getDriver(String browserType){
+
+
         if (browserType.equalsIgnoreCase("chrome")){
             WebDriverManager.chromedriver().setup();
             return new ChromeDriver();
@@ -26,9 +30,7 @@ public class WebDriverFactory {
             return null;
         }
 
-
-
-    }
+           }
     //// Accepts String arg: browserType
     ////   - This arg will determine what type of browser is opened
     ////   - if "chrome" passed --> it will open chrome browser

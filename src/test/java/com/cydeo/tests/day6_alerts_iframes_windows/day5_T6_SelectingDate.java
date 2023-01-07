@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class SelectingDate {
+public class day5_T6_SelectingDate {
     WebDriver driver;
 
     @BeforeMethod

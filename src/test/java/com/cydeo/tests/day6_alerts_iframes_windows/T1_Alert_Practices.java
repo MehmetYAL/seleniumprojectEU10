@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class TC1_Alert_Practices {
+public class T1_Alert_Practices {
 
     WebDriver driver;
     @BeforeMethod
@@ -43,6 +43,8 @@ public class TC1_Alert_Practices {
         String expectedText="You successfully clicked an alert";
         String actualText= resultText.getText();
         Assert.assertTrue(actualText.equals(expectedText));
+        //Assert.assertTrue(resultText.isDisplayed()," result text is not displyaed");
+        Assert.assertEquals(actualText,expectedText," result text is not displayed");
     }
 
     @AfterMethod
