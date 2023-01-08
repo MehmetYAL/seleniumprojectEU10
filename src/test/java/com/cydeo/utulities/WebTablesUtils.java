@@ -3,14 +3,24 @@ package com.cydeo.utulities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 public class WebTablesUtils {
 
     public static String returnOrderDate(WebDriver driver, String customerName){
         String locater="//td[.='"+customerName+"']/following-sibling::td[3]";
+
        WebElement customerDateCell= driver.findElement(By.xpath(locater));
        return customerDateCell.getText();
     }
+
+    public static void orderVerify(WebDriver driver,String customerName,String expectedOrderDate){
+        String locater="//td[.='"+customerName+"']/following-sibling::td[3]";
+        WebElement costumerDateCell= driver.findElement(By.xpath(locater));
+        String actualOrderDate=costumerDateCell.getText();
+        Assert.assertEquals(actualOrderDate,expectedOrderDate);
+    }
+
 }
 /*
 TC #2: Web table practice Task1 cont.
