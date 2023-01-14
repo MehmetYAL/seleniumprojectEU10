@@ -17,9 +17,11 @@ static {
         FileInputStream file=new FileInputStream("configuration.properties");
         //3-load the properties object using FileInputStream object
         properties.load(file);
+        file.close();
     } catch (IOException e) {
         System.out.println("File nout found in the ConfigurationReaded class");
         e.printStackTrace();
+
     }
 }
 

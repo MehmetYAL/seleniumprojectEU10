@@ -22,12 +22,12 @@ public class T3_AlertInformation {
     @Test
     public void alertInformation(){
         //3. Click to “Click for JS Prompt” button
-        WebElement clickJSPROMPT = driver.findElement(By.xpath("//button[contains(@contains,jsPrompt)]"));
+      WebElement clickJSPROMPT = driver.findElement(By.xpath("//button[contains(@onclick,'jsPrompt()')]"));
         clickJSPROMPT.click();
         //4. Send “hello” text to alert
         Alert alert = driver.switchTo().alert();
+        alert.sendKeys("Hello");
         alert.accept();
-        //alert.sendKeys("Hello");
 
 
         //5. Click to OK button from the alert
