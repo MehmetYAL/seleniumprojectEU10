@@ -1,20 +1,15 @@
 package com.cydeo.tests.day8_WebTables_Properties_ConfigurationReader;
 
-import com.cydeo.utulities.ConfigurationReader;
-import com.cydeo.utulities.WebDriverFactory;
+import com.cydeo.utulities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import java.util.concurrent.TimeUnit;
 
 public class T4_ConfigPractice {
 
-    WebDriver driver;
+   /* WebDriver driver;
     @BeforeMethod
     public void setupMethod(){
         //We are getting the browserTypedynmaclly from our configuration.properties file
@@ -25,18 +20,22 @@ public class T4_ConfigPractice {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.get("https://www.google.com");
-    }
+    }*/
+
+
 
     @Test
     public void google_search_test(){
 
+     Driver.getDriver().get("https://www.google.com");
+
       //  3- Write “apple” in search box
-        WebElement searchBox = driver.findElement(By.xpath("//input[@name='q']"));
+        WebElement searchBox = Driver.getDriver().findElement(By.xpath("//input[@name='q']"));
         searchBox.sendKeys("apple", Keys.ENTER);
         //  4- Verify title:
         //Expected: apple - Google Search
         String expectedTitle="apple - Google Search";
-        String actualTitle= driver.getTitle();
+        String actualTitle= Driver.getDriver().getTitle();
         System.out.println("actualTitle = " + actualTitle);
         Assert.assertEquals(actualTitle,expectedTitle);
 

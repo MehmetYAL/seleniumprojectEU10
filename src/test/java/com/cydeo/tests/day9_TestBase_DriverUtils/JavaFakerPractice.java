@@ -1,4 +1,4 @@
-package com.cydeo.tests.day10_Upload_Actions_JSExecuter;
+package com.cydeo.tests.day9_TestBase_DriverUtils;
 
 import com.github.javafaker.Faker;
 import org.testng.annotations.Test;
