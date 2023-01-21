@@ -56,7 +56,7 @@ public class T1_RegistrationForm {
 
         //12.Select Job Title
         Select jobTitle=new Select(Driver.getDriver().findElement(By.xpath("//select[@name='job_title']")));
-        jobTitle.selectByIndex(5);
+        jobTitle.selectByIndex(faker.number().numberBetween(1,7));
 
         //13.Select programming language from checkboxes
         WebElement programmingLanguage=Driver.getDriver().findElement(By.cssSelector("label[for=inlineCheckbox2]"));
@@ -77,7 +77,7 @@ public class T1_RegistrationForm {
 
         Assert.assertEquals(actualMessage,expectedMessage);
 
-
+Driver.getDriver().close();
 
 
     }
