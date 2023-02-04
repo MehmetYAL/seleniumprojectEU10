@@ -221,6 +221,7 @@ ex#2: ex: <a href="https://tesla.com" name="uh68" class="ff58" id="bb22"> TESLA 
 
     tagName[attribute='value']
     a[name='uh68']
+    input[@id='id_gender1']
 
 #2- locate above link using cssSelector, using id:
 

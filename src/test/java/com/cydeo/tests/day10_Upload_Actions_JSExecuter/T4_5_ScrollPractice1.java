@@ -15,10 +15,10 @@ public class T4_5_ScrollPractice1 {
         //2- Go to: https://practice.cydeo.com/
         //3- Scroll down to “Powered by CYDEO”
         Thread.sleep(2000);
-        WebElement scroll=Driver.getDriver().findElement(By.xpath("//div/div/a"));
+    WebElement scrolltoCydeo=Driver.getDriver().findElement(By.xpath("//a[@href='https://cydeo.com/']"));
         Actions actions=new Actions(Driver.getDriver());
         //4- Scroll using Actions class “moveTo(element)” method
-        actions.moveToElement(scroll).perform();
+        actions.moveToElement(scrolltoCydeo).perform();
 
         Thread.sleep(2000);
 
@@ -26,13 +26,20 @@ public class T4_5_ScrollPractice1 {
         //TC #5: Scroll practice 2
         //1- Continue from where the Task 4 is left in the same test.
         //2- Scroll back up to “Home” link using PageUP button
-        WebElement home=Driver.getDriver().findElement(By.xpath("//a[@class='nav-link']"));
+        WebElement scrollToHome=Driver.getDriver().findElement(By.xpath("//a[@class='nav-link']"));
 
-        actions.moveToElement(home).perform();
+        actions.moveToElement(scrollToHome).perform();
+
+        //actions.sendKeys(Keys.PAGE_UP).perform();
         Thread.sleep(2000);
 
 
 
-        Driver.getDriver().close();
+        Driver.closeDriver();
+    }
+
+    @Test
+    public void testPraxtice(){
+        Driver.getDriver().get("https://practice.cydeo.com/");
     }
 }

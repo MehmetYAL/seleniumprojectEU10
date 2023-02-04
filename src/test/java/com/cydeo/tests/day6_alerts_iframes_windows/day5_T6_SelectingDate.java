@@ -30,6 +30,7 @@ public class day5_T6_SelectingDate {
        Select yearDropdown = new Select(driver.findElement(By.xpath("//select[@id='year']")));
        Select monthDropdown= new Select(driver.findElement(By.xpath("//select[@id='month']")));
        Select dayDropdown= new Select(driver.findElement(By.xpath("//select[@id='day']")));
+        //select[@id="days"]/
 
 
         //3. Select “December 1st, 1923” and verify it is selected.

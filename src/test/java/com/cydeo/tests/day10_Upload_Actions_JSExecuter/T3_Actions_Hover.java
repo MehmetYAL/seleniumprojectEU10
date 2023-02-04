@@ -38,6 +38,7 @@ public class T3_Actions_Hover {
         Assert.assertTrue(viewprofile.isDisplayed());
 //        4. Hover over to second image
         BrowserUtils.sleep(2);
+
         actions.moveToElement(img2).perform();
 //        5. Assert:
 //        a. “name: user2” is displayed
@@ -45,6 +46,7 @@ public class T3_Actions_Hover {
         BrowserUtils.sleep(2);
 //        b. “view profile” is displayed
 //        6. Hover over to third image
+
         actions.moveToElement(img3).perform();
 //        7. Confirm:
 //        a. “name: user3” is displayed
