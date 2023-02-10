@@ -1,9 +1,13 @@
 package com.cydeo.utulities;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 public class BrowserUtils {
     public static void sleep(int seconds){
@@ -47,6 +51,18 @@ public class BrowserUtils {
 
         Assert.assertEquals(driver.getTitle(),expectedTitle);
     }
+
+    /*
+    Creating a utulity method for explictWait so we dont have to repeat the lines
+     */
+    public static void waitForInvisibilityOfF(WebElement webElement){
+        Driver.getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+        WebDriverWait wait=new WebDriverWait(Driver.getDriver(),10);
+        wait.until(ExpectedConditions.invisibilityOf(webElement));
+
+    }
+
+
     }
 
 

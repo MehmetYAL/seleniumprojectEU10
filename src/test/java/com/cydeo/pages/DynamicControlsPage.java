@@ -23,6 +23,16 @@ public class DynamicControlsPage {
     @FindBy(id="message")
     public WebElement disappearMessage;
 
+    @FindBy(xpath = "//button[.='Enable']")
+    public WebElement enableButton;
+
+    @FindBy(id="loading")
+        public WebElement loadingBar;
+
+    @FindBy(xpath = "//*[@id='message']")
+    public WebElement enableMessage;
+
+
 
 
 
