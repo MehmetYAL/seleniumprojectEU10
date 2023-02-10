@@ -2,6 +2,7 @@ package com.cydeo.tests.day10_Upload_Actions_JSExecuter;
 
 import com.cydeo.utulities.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
@@ -29,8 +30,8 @@ public class T4_5_ScrollPractice1 {
         WebElement scrollToHome=Driver.getDriver().findElement(By.xpath("//a[@class='nav-link']"));
 
         actions.moveToElement(scrollToHome).perform();
-
-        //actions.sendKeys(Keys.PAGE_UP).perform();
+        Thread.sleep(2000);
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
         Thread.sleep(2000);
 
 
@@ -40,6 +41,10 @@ public class T4_5_ScrollPractice1 {
 
     @Test
     public void testPraxtice(){
+
         Driver.getDriver().get("https://practice.cydeo.com/");
+
+
+
     }
 }
